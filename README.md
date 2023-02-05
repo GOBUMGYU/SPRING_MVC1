@@ -5,7 +5,7 @@ https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard
 
 <h1>목차</h1>
 
-- 웹 애플리케이션의 이해  
+- [웹 애플리케이션의 이해](https://github.com/GOBUMGYU/SPRING_MVC1/blob/main/docs/%EC%9B%B9%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%98%20%EC%9D%B4%ED%95%B4.md)  
   - 웹 서버, 웹 애플리케이션 서버  
   - 서블릿  
   - 동시 요청 - 멀티 쓰레드
