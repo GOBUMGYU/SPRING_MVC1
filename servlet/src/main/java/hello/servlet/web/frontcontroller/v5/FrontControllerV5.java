@@ -48,19 +48,20 @@ public class FrontControllerV5 extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       //1. 핸들러 조회
         Object handler = getHandler(request);
         if(handler == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
-
+        //2. 핸들러 어댑터 조회 - 핸들러를 처리할 수 있는 어댑터
         MyHandlerAdapter adapter = getHandlerAdapter(handler);
-
+        //3. 핸들러 어댑터 실행 -> 4. 핸들러 어댑터를 통해 핸들러 실행 -> 5. ModelView 반환
         ModelView mv = adapter.handle(request, response, handler);
 
         String viewName = mv.getViewName();
         MyView view = viewResolver(viewName);
-
+        //뷰 렌더링 호출
         view.render(mv.getModel(), request, response);
     }
     private Object getHandler(HttpServletRequest request) {
