@@ -60,6 +60,7 @@ public class FrontControllerV5 extends HttpServlet {
         ModelView mv = adapter.handle(request, response, handler);
 
         String viewName = mv.getViewName();
+        //6. 뷰 리졸버를 통해서 뷰 찾기  7. View 반환
         MyView view = viewResolver(viewName);
         //뷰 렌더링 호출
         view.render(mv.getModel(), request, response);
