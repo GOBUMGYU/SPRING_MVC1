@@ -3,6 +3,9 @@ package hello.servlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /*
 서블릿은 톰캣 같은 웹 애플리케이션 서버를 직접 설치하고
@@ -13,9 +16,5 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @ServletComponentScan //서블릿 자동 등록
 @SpringBootApplication
 public class ServletApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ServletApplication.class, args);
-	}
-
+	public static void main(String[] args) { SpringApplication.run(ServletApplication.class, args); }
 }
